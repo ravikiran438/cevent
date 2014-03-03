@@ -1,0 +1,1 @@
+export _JAVA_OPTIONS="-Dspring.profiles.active=openshift"
