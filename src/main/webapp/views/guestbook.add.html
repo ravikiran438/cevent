@@ -1,0 +1,11 @@
+<form role="form">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter Name" ng-model="user.name">
+  </div>
+  <div class="form-group">
+    <label for="body">Message</label>
+    <textarea id="body" placeholder="Enter Message here....." class="form-control" rows="3" ng-model="user.body"></textarea>
+  </div>
+  <button type="button" class="btn btn-primary" ng-click="save()">Submit</button>
+</form>

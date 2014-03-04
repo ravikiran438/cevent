@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Cevent App</title>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/vendor/xeditable.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="resources/css/main.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lte IE 7]>
+        <script src="resources/js/vendor/json2.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="ceventApp">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Hello, world!</h1>
+            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+            <div class="well" ui-view></div>  
+          </div>
+        </div><!--/span-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group">
+            <a ui-sref="route1" ui-sref-active="active" class="list-group-item">Route 1</a>
+            <a ui-sref="route2" ui-sref-active="active" class="list-group-item">Route 2</a>
+            <a ui-sref="guestbook.list" ui-sref-active="active" class="list-group-item">Guest Book</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+
+    </div><!--/.container-->    
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script type="text/javascript" src="resources/js/vendor/angular-ui-router.min.js"></script>
+<script src="resources/js/vendor/ui-bootstrap-tpls-0.10.0.min.js"></script>
+<script src="resources/js/vendor/xeditable.min.js"></script>
+<script src="resources/js/vendor/moment.min.js"></script>
+<script src="resources/js/app.js"></script>
+<script src="resources/js/controllers.js"></script>
+<script src="resources/js/services.js"></script>
+<script src="resources/js/filters.js"></script>
+</body>
+</html>

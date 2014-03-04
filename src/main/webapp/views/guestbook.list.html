@@ -1,0 +1,7 @@
+<h1>All Messages</h1>
+<div>
+	<div ng-repeat="message in messages">
+		<span>{{message.name}}</span><span>{{message.id | fromNow}}</span>
+		<div>{{message.body}}</div>
+	</div>
+</div>
