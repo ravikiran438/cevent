@@ -1,7 +1,11 @@
 <h1>All Messages</h1>
 <div>
 	<div ng-repeat="message in messages">
-		<div><h4>{{message.body}}</h4></div>
-		<span>{{message.name}}</span> | Posted <span>{{message.id | fromNow}}</span>
+		<div ng-repeat="message in messages">
+			<p class="text-right"><small>Posted {{message.id | fromNow}}</small></p>
+			<p>{{message.body}}</p>
+			<small>- {{message.name}}</small>
+			<hr/>
+		</div>
 	</div>
 </div>

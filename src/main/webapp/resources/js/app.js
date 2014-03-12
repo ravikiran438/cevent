@@ -43,9 +43,17 @@ var ceventApp = angular.module('ceventApp', ['ui.bootstrap', 'ui.router', 'xedit
               url: "/list",
               templateUrl: "views/guestbook.list.html",
               controller: 'GuestBookListCtrl'
+          })
+        .state('venue', {
+              url: "/venue",
+              templateUrl: "views/venue.html",
+              controller: 'VenueCtrl'
           });
     });
     
-    ceventApp.run(function(editableOptions) {
+    ceventApp.run(function(editableOptions, $rootScope) {
     	  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+    	  $rootScope.toggleNav = function() {
+    		  $('.row-offcanvas').toggleClass('active');
+    	  };
     	});

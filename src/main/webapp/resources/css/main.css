@@ -69,3 +69,14 @@ footer {
     width: 50%; /* 6 columns */
   }
 }
+
+/*global styles*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Venue styles*/
+#map-canvas { height: 400px; }
+#map-canvas2 { height: 400px; }

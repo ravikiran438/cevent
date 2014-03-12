@@ -3,6 +3,7 @@ package com.mycompany.cevent.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -38,7 +39,7 @@ public class MessageResource {
 	@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public List<Message> allmessages() {
-		return messageRepository.findAll();
+		return messageRepository.findAll(sortById());
 	}
 
 	@RequestMapping(value = "/{messageId}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -50,5 +51,13 @@ public class MessageResource {
 		}
 		return message;
 	}
+	
+    /**
+     * Returns a Sort object which sorts messages in ascending order by using the id (timestamp).
+     * @return
+     */
+    private Sort sortById() {
+        return new Sort(Sort.Direction.DESC, "_id");
+    }
 
 }
