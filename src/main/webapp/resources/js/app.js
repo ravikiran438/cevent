@@ -1,11 +1,15 @@
-var ceventApp = angular.module('ceventApp', ['ui.bootstrap', 'ui.router', 'xeditable']);
+var ceventApp = angular.module('ceventApp', ['ui.bootstrap', 'ui.router', 'xeditable', 'ngAnimate']);
 
     ceventApp.config(function($stateProvider, $urlRouterProvider){
       
       // For any unmatched url, send to /route1
-      $urlRouterProvider.otherwise("/route1");
+      $urlRouterProvider.otherwise("/home");
       
       $stateProvider
+      .state('home', {
+          url: "/home",
+          templateUrl: "views/home.html"
+      	})
         .state('route1', {
             url: "/route1",
             templateUrl: "views/route1.html"

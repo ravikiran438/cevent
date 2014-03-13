@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 20px;
   background-color: transparent;
 }
 footer {
@@ -76,6 +76,11 @@ footer {
   display: table;
   clear: both;
 }
+
+/*home styles*/
+
+.header {font-family: 'Flamenco', cursive; font-size: 22px; color: #FFF;}
+.header h1 {font-size: 55px;}
 
 /*Venue styles*/
 #map-canvas { height: 400px; }
