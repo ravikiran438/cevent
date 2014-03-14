@@ -1,7 +1,7 @@
 /* Have to set height explicity on ui-view 
 to prevent collapsing during animation*/
 .well[ui-view]{
- height: 100%; 
+ height: 960px; 
 }
 
 .ui-view-container {

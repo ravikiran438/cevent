@@ -1,11 +1,9 @@
-<h4>All Messages</h4>
-<div>
+<h4>{{messages.length}} messages</h4>
+<div class="messages">
 	<div ng-repeat="message in messages">
-		<div ng-repeat="message in messages">
-			<p class="text-right"><small>Posted {{message.id | fromNow}}</small></p>
-			<p>{{message.body}}</p>
-			<small>- {{message.name}}</small>
-			<hr/>
-		</div>
+		<p class="text-right"><small>Posted {{message.id | fromNow}}</small></p>
+		<p>{{message.body}}</p>
+		<small>- {{message.name}}</small>
+		<hr/>
 	</div>
 </div>

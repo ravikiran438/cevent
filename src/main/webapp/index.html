@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="resources/css/vendor/font-awesome.min.css">
     <link href='//fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="resources/css/animate.css">
     <link rel="stylesheet" href="resources/css/main.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -33,56 +32,44 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="header text-center">
-		<h1>Bhanu & Praveen</h1>
-		<div>March 24th 2014</div>
-	</div>
-	<div class="group"></div>
+
     <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary" data-toggle="offcanvas" ng-click="toggleNav();">
-            	<span class="glyphicon glyphicon-align-justify"></span>
-            </button>
-          </p>
-          <div class="row">
-    		<div class=".col-md-12 ui-view-container">
-          		<div class="well" ui-view></div>
+      <div class="navbar navbar-default" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" ng-click="toggleNav();">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	          	<li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+	            <li ui-sref-active="active"><a ui-sref="bride">The Bride</a></li>
+	            <li ui-sref-active="active"><a ui-sref="groom">The Groom</a></li>
+	            <li ui-sref-active="active"><a ui-sref="family">Our Family</a></li>
+	            <li ui-sref-active="active"><a ui-sref="cards">Invitation Cards</a></li>
+	            <li ui-sref-active="active"><a ui-sref="guestbook.list">Guest Book</a></li>
+	            <li ui-sref-active="active"><a ui-sref="venue">Venue</a></li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+      </div>
+	  <div class="page-header text-center header">
+	  	<h1>Bhanu & Praveen</h1>
+		<p>March 24th 2014</p>
+	  </div>
+	  <div class="row">
+    		<div class="col-md-12">
+          		<div class="well" ui-view autoscroll='false'></div>
           	</div>
-          </div>
-        </div><!--/span-->
-
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="list-group">
-            <a ui-sref="route1" ui-sref-active="active" class="list-group-item">Route 1</a>
-            <a ui-sref="route2" ui-sref-active="active" class="list-group-item">Route 2</a>
-            <a ui-sref="guestbook.list" ui-sref-active="active" class="list-group-item">Guest Book</a>
-            <a ui-sref="venue" ui-sref-active="active" class="list-group-item">Venue</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div><!--/span-->
-      </div><!--/row-->
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2014</p>
-      </footer>
-
+     </div>
     </div><!--/.container-->    
 <!-- Placed at the end of the document so the pages load faster --> 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.js"></script>
 <script type="text/javascript" src="resources/js/vendor/angular-ui-router.min.js"></script>
 <script src="resources/js/vendor/ui-bootstrap-tpls-0.10.0.min.js"></script>
 <script src="resources/js/vendor/xeditable.min.js"></script>

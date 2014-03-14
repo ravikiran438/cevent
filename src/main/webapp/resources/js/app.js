@@ -1,4 +1,4 @@
-var ceventApp = angular.module('ceventApp', ['ui.bootstrap', 'ui.router', 'xeditable', 'ngAnimate']);
+var ceventApp = angular.module('ceventApp', ['ui.bootstrap', 'ui.router', 'xeditable']);
 
     ceventApp.config(function($stateProvider, $urlRouterProvider){
       
@@ -10,29 +10,27 @@ var ceventApp = angular.module('ceventApp', ['ui.bootstrap', 'ui.router', 'xedit
           url: "/home",
           templateUrl: "views/home.html"
       	})
-        .state('route1', {
-            url: "/route1",
-            templateUrl: "views/route1.html"
+        .state('bride', {
+            url: "/bride",
+            templateUrl: "views/bride.html",
+            controller: 'CarouselBhanuCtrl'
         })
-          .state('route1.list', {
-              url: "/list",
-              templateUrl: "views/route1.list.html",
-              controller: function($scope){
-                $scope.items = ["A", "List", "Of", "Items"];
-              }
-          })
           
-        .state('route2', {
-            url: "/route2",
-            templateUrl: "views/route2.html"
+        .state('groom', {
+            url: "/groom",
+            templateUrl: "views/groom.html",
+            controller: 'CarouselPraveenCtrl'
         })
-          .state('route2.list', {
-              url: "/list",
-              templateUrl: "views/route2.list.html",
-              controller: function($scope){
-                $scope.things = ["A", "Set", "Of", "Things"];
-              }
-          })
+        
+        .state('family', {
+            url: "/family",
+            templateUrl: "views/family.html"
+        })
+        .state('cards', {
+            url: "/cards",
+            templateUrl: "views/cards.html",
+            controller: 'CarouselCardsCtrl'
+        })
           
           .state('guestbook', {
             url: "/guestbook",
@@ -58,6 +56,6 @@ var ceventApp = angular.module('ceventApp', ['ui.bootstrap', 'ui.router', 'xedit
     ceventApp.run(function(editableOptions, $rootScope) {
     	  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
     	  $rootScope.toggleNav = function() {
-    		  $('.row-offcanvas').toggleClass('active');
+    		  $('.navbar-collapse').toggleClass('in');
     	  };
     	});

@@ -2,6 +2,50 @@
 
 /* Controllers */
 
+ceventApp.controller('CarouselPraveenCtrl', ['$scope',
+	  function ($scope) {
+		$scope.myInterval = 5000;
+		  var slides = $scope.slides = [];
+		  $scope.addSlide = function() {
+		    var fileName = 'img_' + slides.length;
+		    slides.push({
+		      image: 'resources/images/praveen/' + fileName + '.jpg'
+		    });
+		  };
+		  for (var i=0; i<3; i++) {
+		    $scope.addSlide();
+		  }
+	}]);
+
+ceventApp.controller('CarouselBhanuCtrl', ['$scope',
+   	  function ($scope) {
+   		$scope.myInterval = 5000;
+   		  var slides = $scope.slides = [];
+   		  $scope.addSlide = function() {
+   		    var fileName = 'img_' + slides.length;
+   		    slides.push({
+   		      image: 'resources/images/bhanu/' + fileName + '.jpg'
+   		    });
+   		  };
+   		  for (var i=0; i<3; i++) {
+   		    $scope.addSlide();
+   		  }
+   	}]);
+
+ceventApp.controller('CarouselCardsCtrl', ['$scope',
+	  function ($scope) {
+		$scope.myInterval = 5000;
+		  var slides = $scope.slides = [];
+		  $scope.addSlide = function() {
+		    var fileName = 'img_' + slides.length;
+		    slides.push({
+		      image: 'resources/images/cards/' + fileName + '.jpg'
+		    });
+		  };
+		  for (var i=0; i<4; i++) {
+		    $scope.addSlide();
+		  }
+	}]);
 ceventApp.controller('GuestBookAddCtrl', ['$scope', '$http', 'SaveMessageService', '$state',
     function ($scope, $http, SaveMessageService, $state) {
 		$scope.save = function() {
