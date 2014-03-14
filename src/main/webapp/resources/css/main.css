@@ -5,24 +5,16 @@
 html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
+  background-color: #7b141f;
+  height: 100%;
 }
 
-html { 
-  background: url(../images/flowers-bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
-}
-/*
- * Fixed nav
- * --------------------------------------------------
- */
 body {
   background-color: transparent;
-  font-family: 'Flamenco', cursive; 
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5) inset;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Flamenco', cursive;
+  font-size: 18px; 
 }
 
 /*global styles*/
@@ -40,7 +32,7 @@ hr {
 .navbar {
 	background-color: transparent;
 	border: none;
-	font-size: 18px;
+	font-size: 22px;
 }
 .navbar .navbar-nav {
   display: inline-block;
