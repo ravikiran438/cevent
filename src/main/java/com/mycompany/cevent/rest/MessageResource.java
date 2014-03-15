@@ -2,6 +2,8 @@ package com.mycompany.cevent.rest;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
@@ -15,12 +17,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mycompany.cevent.domain.Message;
 import com.mycompany.cevent.repository.MessageRepository;
+import com.mycompany.cevent.service.MailService;
 
 @Controller
 @RequestMapping("/messages")
 public class MessageResource {
 
 	private MessageRepository messageRepository;
+	
+	@Inject
+	private MailService mailService;
 
 	@Autowired
 	public MessageResource(MessageRepository messageRepository) {
@@ -31,6 +37,7 @@ public class MessageResource {
 	@ResponseBody
 	public ResponseEntity<Void> submitMessage(@RequestBody Message Message) {
 		messageRepository.save(Message);
+		mailService.sendEmail(Message.getBody());
 		ResponseEntity<Void> responseEntity = new ResponseEntity<>(
 				HttpStatus.CREATED);
 		return responseEntity;
