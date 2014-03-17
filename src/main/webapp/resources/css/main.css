@@ -69,8 +69,25 @@ hr {
 
 .header {font-size: 22px; color: #FFF; border-bottom: none;}
 .header h1 {font-size: 55px;}
-.center-block-width {
-	width: 50%;
+.live-video-container iframe {
+	width: 480px;
+	height: 302px;
+}
+.live-video-container a {
+	width: 400px;
+}
+
+@media (max-width: 550px) {
+	.live-video-container iframe {
+		width: 360px;
+		height: 235px;
+	}
+	.live-video-container a {
+		width: 280px;
+	}
+	.well {
+		padding: 5px 5px;
+	}
 }
 
 /*Venue styles*/
