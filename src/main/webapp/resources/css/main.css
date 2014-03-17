@@ -69,6 +69,9 @@ hr {
 
 .header {font-size: 22px; color: #FFF; border-bottom: none;}
 .header h1 {font-size: 55px;}
+.center-block-width {
+	width: 50%;
+}
 
 /*Venue styles*/
 #map-canvas { height: 400px; }

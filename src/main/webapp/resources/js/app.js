@@ -50,6 +50,10 @@ var ceventApp = angular.module('ceventApp', ['ui.bootstrap', 'ui.router', 'xedit
               url: "/venue",
               templateUrl: "views/venue.html",
               controller: 'VenueCtrl'
+          })
+          .state('live', {
+              url: "/live",
+              templateUrl: "views/live.html"
           });
     });
     
