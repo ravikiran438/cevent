@@ -29,7 +29,7 @@ public class DatabaseConfiguration {
 	@Bean
 	public MongoTemplate mongoTemplate() throws Exception {
 		for (String profile : env.getActiveProfiles()) {
-			if (profile.equals("openshift")) {
+			if (profile.equals(Constants.SPRING_PROFILE_OPENSHIFT)) {
 				String openshiftMongoDbHost = System
 						.getenv("OPENSHIFT_MONGODB_DB_HOST");
 				int openshiftMongoDbPort = Integer.parseInt(System

@@ -20,7 +20,7 @@ import com.mycompany.cevent.repository.MessageRepository;
 import com.mycompany.cevent.service.MailService;
 
 @Controller
-@RequestMapping("/messages")
+@RequestMapping("/rest/messages")
 public class MessageResource {
 
 	private MessageRepository messageRepository;
@@ -49,7 +49,7 @@ public class MessageResource {
 		return messageRepository.findAll(sortById());
 	}
 
-	@RequestMapping(value = "/{messageId}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/rest/messages/{messageId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Message showMessage(@PathVariable("messageId") String messageId) {
 		Message message = messageRepository.findOne(messageId);

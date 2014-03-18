@@ -3,7 +3,7 @@
 	<div class="col-md-12">
 	  <div>
 	    <carousel interval="myInterval">
-	      <slide ng-repeat="slide in slides" active="slide.active">
+	      <slide ng-repeat="slide in slides1" active="slide.active">
 	        <img ng-src="{{slide.image}}" style="margin:auto;">
 	      </slide>
 	    </carousel>
@@ -11,3 +11,14 @@
 	</div>
 </div>
 <hr/>
+<div class="row">
+	<div class="col-md-12">
+	  <div>
+	    <carousel interval="myInterval">
+	      <slide ng-repeat="slide in slides2" active="slide.active">
+	        <img ng-src="{{slide.image}}" style="margin:auto;">
+	      </slide>
+	    </carousel>
+	  </div>
+	</div>
+</div>

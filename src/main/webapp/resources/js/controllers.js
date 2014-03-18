@@ -35,11 +35,16 @@ ceventApp.controller('CarouselBhanuCtrl', ['$scope',
 ceventApp.controller('CarouselCardsCtrl', ['$scope',
 	  function ($scope) {
 		$scope.myInterval = 5000;
-		  var slides = $scope.slides = [];
+		  var slides1 = $scope.slides1 = [];
+		  var slides2 = $scope.slides2 = [];
 		  $scope.addSlide = function() {
-		    var fileName = 'img_' + slides.length;
-		    slides.push({
-		      image: 'resources/images/cards/' + fileName + '.jpg'
+		    var fileName1 = 'img_' + slides1.length;
+		    slides1.push({
+		      image: 'resources/images/cards/1/' + fileName1 + '.jpg'
+		    });
+		    var fileName2 = 'img_' + slides2.length;
+		    slides2.push({
+		      image: 'resources/images/cards/2/' + fileName2 + '.jpg'
 		    });
 		  };
 		  for (var i=0; i<4; i++) {
