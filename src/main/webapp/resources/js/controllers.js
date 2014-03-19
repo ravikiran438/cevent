@@ -12,7 +12,7 @@ ceventApp.controller('CarouselPraveenCtrl', ['$scope',
 		      image: 'resources/images/praveen/' + fileName + '.jpg'
 		    });
 		  };
-		  for (var i=0; i<6; i++) {
+		  for (var i=0; i<5; i++) {
 		    $scope.addSlide();
 		  }
 	}]);
@@ -27,7 +27,7 @@ ceventApp.controller('CarouselBhanuCtrl', ['$scope',
    		      image: 'resources/images/bhanu/' + fileName + '.jpg'
    		    });
    		  };
-   		  for (var i=0; i<6; i++) {
+   		  for (var i=0; i<5; i++) {
    		    $scope.addSlide();
    		  }
    	}]);
