@@ -75,6 +75,7 @@ public class WebConfigurer implements ServletContextListener {
         compressingFilter.addMappingForUrlPatterns(disps, true, "*.json");
         compressingFilter.addMappingForUrlPatterns(disps, true, "*.html");
         compressingFilter.addMappingForUrlPatterns(disps, true, "*.js");
+        compressingFilter.addMappingForUrlPatterns(disps, true, "*.map");
         compressingFilter.addMappingForUrlPatterns(disps, true, "/app/rest/*");
 
         compressingFilter.setAsyncSupported(true);
