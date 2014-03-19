@@ -1,1 +1,1 @@
-export _JAVA_OPTIONS="-Dspring.profiles.active=openshift"
+export _JAVA_OPTIONS="-Dspring.profiles.active=openshift -Duser.timezone=US/Eastern"
