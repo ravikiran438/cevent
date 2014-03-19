@@ -69,6 +69,9 @@ hr {
 
 .header {font-size: 22px; color: #FFF; border-bottom: none;}
 .header h1 {font-size: 55px;}
+.img-container {
+	padding-bottom: 15px;
+}
 .live-video-container iframe {
 	width: 480px;
 	height: 302px;
